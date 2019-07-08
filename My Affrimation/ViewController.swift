@@ -10,16 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var myAffrimationLable: UILabel!
+    @IBOutlet weak var myAffrimationTextfield: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+   
+    @IBAction func affirmButtonPress(_ sender: UIButton) {
+        
+    let lableText = myAffrimationLable.text!
+        let inText = myAffrimationTextfield.text!
+      myAffrimationLable.text = lableText + inText + "\n"
     }
-
-
 }
+    
+    
+
 
